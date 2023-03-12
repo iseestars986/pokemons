@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-function App() {
+import { PokemonList } from "./components/PokemonList";
+import { Search } from "./components/Search";
+import { Modal } from "./components/Modal";
+import { Pagination } from "./components/Pagination";
+import { fetchPokemons } from "./store/pokeSlice/pokeThunk";
+import "./assets/styles.css";
+
+const App = () => {
+  const { currentPage, perPage } = useSelector((state) => state.pokemons);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchPokemons({ url: currentPage, params: { limit: perPage } }));
+  }, [currentPage, perPage]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <Search />
+      <PokemonList />
+      <Modal />
+      <Pagination />
     </div>
   );
-}
+};
 
 export default App;

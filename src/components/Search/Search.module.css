@@ -1,0 +1,36 @@
+.search {
+    position: relative;
+    left: 10px;
+}
+
+.searchInput {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    height: 35px;
+    width: 380px;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+span {
+    position: relative;
+    top: 5px;
+    left: -25px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width:700px) {
+    .search {
+        display: flex;
+    }
+}
+
+@media (max-width:680px) {
+    .searchInput {
+        width: 220px;
+    }
+}

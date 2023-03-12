@@ -1,0 +1,49 @@
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.61);
+    width: 100%;
+    height: 100vh;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: aliceblue;
+    border-radius: 15px;
+    padding: 20px 50px;
+    width: 30%;
+}
+
+.statsBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modalHeaderLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.closeBtn {
+    cursor: pointer;
+}
+
+.modalImage {
+    margin: 0 auto;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+

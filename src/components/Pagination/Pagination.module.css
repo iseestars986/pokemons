@@ -1,0 +1,36 @@
+.bottomBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pokemonsPerPage {
+    position: relative;
+    left: -10px;
+}
+
+button {
+    background-color: #ffffff00;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+button:active {
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+
+}
+
+@media (max-width:601px) {
+    .pokemonsPerPage {
+       display: flex;
+    }
+}

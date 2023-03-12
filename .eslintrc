@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "semi": "warn",
+    "space-in-parens": "warn",
+    "prefer-const": "warn",
+    "no-var": "error",
+    "no-use-before-define": "error"
+  }
+}
